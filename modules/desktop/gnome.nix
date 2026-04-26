@@ -75,7 +75,8 @@
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-color-emoji
-    (nerdfonts.override { fonts = [ "JetBrainsMono" "FiraCode" ]; })
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.fira-code
   ];
 
   # Enable the udev rules shipped with GNOME (needed by gnome-settings-daemon)
