@@ -49,6 +49,6 @@
     # ── User bindings ──────────────────────────────────────────────────────
     # Each entry maps a NixOS username → a Home Manager configuration file.
     # Add more users here as needed.
-    users.nixuser = import ../home/default.nix;
+    users.zerotens = import ../home/default.nix;
   };
 }

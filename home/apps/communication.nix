@@ -16,6 +16,9 @@
     # ── Email ─────────────────────────────────────────────────────────────
     thunderbird       # full-featured email + calendar client
 
+    # ── Voice chat ────────────────────────────────────────────────────────
+    teamspeak6-client # TeamSpeak 6 voice communication client
+
     # ── Video conferencing ─────────────────────────────────────────────────
     zoom-us           # Zoom (unfree)
     # teams-for-linux # uncomment for Microsoft Teams (community wrapper)

@@ -3,7 +3,7 @@
 # User-level GNOME configuration via dconf.
 # Run `dconf watch /` while changing a setting in GNOME to find the key path.
 # ─────────────────────────────────────────────────────────────────────────────
-{ ... }:
+{ lib, ... }:
 
 {
   dconf.settings = {
@@ -130,9 +130,14 @@
       night-light-temperature   = 4000;   # Kelvin (3000 = warm amber, 6500 = daylight)
     };
 
+    # ── Keyboard layout ───────────────────────────────────────────────────
+    "org/gnome/desktop/input-sources" = {
+      sources = [ (lib.hm.gvariant.mkTuple [ "xkb" "de" ]) ];
+    };
+
     # ── Screenshots ───────────────────────────────────────────────────────
     "org/gnome/gnome-screenshot" = {
-      auto-save-directory = "file:///home/nixuser/Pictures/Screenshots";
+      auto-save-directory = "file:///home/zerotens/Pictures/Screenshots";
     };
   };
 }

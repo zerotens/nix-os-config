@@ -1,6 +1,6 @@
 # home/default.nix
 # ─────────────────────────────────────────────────────────────────────────────
-# Home Manager entry point for nixuser.
+# Home Manager entry point for zerotens.
 # Only sets the mandatory identity fields and imports all category modules.
 # Actual package/program declarations live in the sub-modules below.
 # ─────────────────────────────────────────────────────────────────────────────
@@ -8,8 +8,8 @@
 
 {
   # ── Identity (required by Home Manager) ───────────────────────────────────
-  home.username      = "nixuser";
-  home.homeDirectory = "/home/nixuser";
+  home.username      = "zerotens";
+  home.homeDirectory = "/home/zerotens";
 
   # Must match system.stateVersion in common.nix — do NOT bump after install.
   home.stateVersion  = "25.11";

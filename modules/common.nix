@@ -31,7 +31,7 @@
   # ── Locale & Time ──────────────────────────────────────────────────────────
   time.timeZone               = lib.mkDefault "Europe/Berlin";
   i18n.defaultLocale          = "en_US.UTF-8";
-  console.keyMap              = lib.mkDefault "us";
+  console.keyMap              = lib.mkDefault "de";
 
   # ── Networking ─────────────────────────────────────────────────────────────
   networking = {
@@ -65,11 +65,11 @@
   };
 
   # ── Users ──────────────────────────────────────────────────────────────────
-  users.users.nixuser = {
+  users.users.zerotens = {
     isNormalUser = true;
     description  = "NixOS User";
     extraGroups  = [ "wheel" "networkmanager" "video" "audio" "gamemode" ];
-    # Set password with: passwd nixuser
+    # Set password with: passwd zerotens
     # Or use: hashedPassword = "...";
   };
 
