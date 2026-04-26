@@ -11,7 +11,7 @@
   # For AMD+AMD, use the amdgpu driver and amdvlk packages.
 
   # Intel iGPU (VA-API for hardware video decode)
-  hardware.opengl.extraPackages = with pkgs; [
+  hardware.graphics.extraPackages = with pkgs; [
     intel-media-driver   # iHD driver (Gen 8+)
     libva-vdpau-driver
     libvdpau-va-gl

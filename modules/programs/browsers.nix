@@ -60,5 +60,5 @@
   # ── VA-API / hardware video decoding ──────────────────────────────────────
   # Needed for smooth 4K/HDR in both browsers.
   # The correct driver depends on your GPU — see hardware/<host>.nix.
-  hardware.opengl.enable = true;
+  hardware.graphics.enable = true;
 }

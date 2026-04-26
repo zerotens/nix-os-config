@@ -25,16 +25,16 @@
 
   # AMD (open kernel driver — recommended for RX 5000+)
   services.xserver.videoDrivers = [ "amdgpu" ];
-  hardware.opengl.extraPackages = with pkgs; [
+  hardware.graphics.extraPackages = with pkgs; [
     amdvlk          # AMD Vulkan driver
     rocmPackages.clr # ROCm OpenCL runtime (for GPU compute)
   ];
-  hardware.opengl.extraPackages32 = with pkgs; [
+  hardware.graphics.extraPackages32 = with pkgs; [
     driversi686Linux.amdvlk
   ];
 
   # Intel (integrated graphics — works out of the box, add VA-API packages)
-  # hardware.opengl.extraPackages = with pkgs; [ intel-media-driver libva-vdpau-driver ];
+  # hardware.graphics.extraPackages = with pkgs; [ intel-media-driver libva-vdpau-driver ];
 
   # ── Desktop-specific packages ──────────────────────────────────────────────
   environment.systemPackages = with pkgs; [

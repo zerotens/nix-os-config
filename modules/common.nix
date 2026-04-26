@@ -53,7 +53,7 @@
     jack.enable       = true;
   };
   # Disable legacy PulseAudio daemon (PipeWire exposes the PulseAudio socket)
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable      = true; # real-time priority for PipeWire
 
   # ── Printing ───────────────────────────────────────────────────────────────

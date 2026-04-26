@@ -58,7 +58,7 @@
 
   # ── Proton / Wine dependencies ─────────────────────────────────────────────
   # 32-bit userland is required for most Windows games via Proton.
-  hardware.opengl.enable = lib.mkDefault true;
+  hardware.graphics.enable = lib.mkDefault true;
 
   environment.systemPackages = with pkgs; [
     # Launchers & helpers

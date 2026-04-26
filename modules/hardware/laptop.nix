@@ -34,14 +34,12 @@
 
   # ── Suspend / Hibernate ────────────────────────────────────────────────────
   # Close lid → suspend; long-press power → hibernate (requires swap ≥ RAM size)
-  services.logind = {
-    lidSwitch              = "suspend";
-    lidSwitchExternalPower = "lock";
-    settings.Login = {
-      HandlePowerKey  = "hibernate";
-      IdleAction      = "suspend";
-      IdleActionSec   = "10min";
-    };
+  services.logind.settings.Login = {
+    HandleLidSwitch              = "suspend";
+    HandleLidSwitchExternalPower = "lock";
+    HandlePowerKey               = "hibernate";
+    IdleAction                   = "suspend";
+    IdleActionSec                = "10min";
   };
 
   # ── Laptop-specific packages ───────────────────────────────────────────────

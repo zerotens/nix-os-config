@@ -56,7 +56,7 @@
   programs.vscode = {
     enable = true;
     # Extensions are declared here so they survive profile rebuilds.
-    extensions = with pkgs.vscode-extensions; [
+    profiles.default.extensions = with pkgs.vscode-extensions; [
       # Nix
       jnoortheen.nix-ide
       # Git
@@ -76,7 +76,7 @@
       ms-vscode.makefile-tools
       usernamehw.errorlens
     ];
-    userSettings = {
+    profiles.default.userSettings = {
       "editor.fontFamily"            = "'JetBrainsMono Nerd Font', monospace";
       "editor.fontSize"              = 14;
       "editor.lineHeight"            = 1.6;

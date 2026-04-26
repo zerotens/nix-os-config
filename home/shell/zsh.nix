@@ -17,7 +17,7 @@
       share      = true;
     };
 
-    initExtra = ''
+    initContent = ''
       # ── zoxide smart cd ─────────────────────────────────────────────────
       eval "$(zoxide init zsh --cmd cd)"
 

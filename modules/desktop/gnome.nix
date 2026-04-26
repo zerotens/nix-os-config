@@ -6,17 +6,14 @@
 
 {
   # ── Display server & compositor ────────────────────────────────────────────
-  services.xserver = {
-    enable = true;
+  services.xserver.enable = true;
 
-    # GNOME display manager (Wayland session is the default since GNOME 40)
-    displayManager.gdm = {
-      enable  = true;
-      wayland = true;   # explicitly prefer Wayland sessions in GDM
-    };
-
-    desktopManager.gnome.enable = true;
+  services.displayManager.gdm = {
+    enable  = true;
+    wayland = true;
   };
+
+  services.desktopManager.gnome.enable = true;
 
   # XWayland — runs X11 apps inside the Wayland compositor
   # Set to false only if you never need legacy X11 apps.
