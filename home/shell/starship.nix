@@ -11,7 +11,7 @@
       add_newline = true;
       scan_timeout = 30;
 
-      format = lib: ''
+      format = ''
         $os$username$hostname$directory$git_branch$git_status$nix_shell$python$rust$golang$nodejs$docker_context
         $character'';
 
