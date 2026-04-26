@@ -9,7 +9,7 @@
 
 {
   services.syncthing = {
-    enable = true;
+    enable = false;
 
     # ── Web GUI ─────────────────────────────────────────────────────────────
     # Bind to localhost only (reverse-proxy or SSH tunnel for remote access).

@@ -8,19 +8,19 @@
 {
   home.packages = with pkgs; [
     # ── Instant messaging ──────────────────────────────────────────────────
-    discord           # voice + text + screen-share (unfree)
-    signal-desktop    # end-to-end encrypted messaging
-    telegram-desktop  # Telegram (MTProto encrypted)
-    element-desktop   # Matrix protocol client (open federated chat)
+    #discord           # voice + text + screen-share (unfree)
+    #signal-desktop    # end-to-end encrypted messaging
+    #telegram-desktop  # Telegram (MTProto encrypted)
+    #element-desktop   # Matrix protocol client (open federated chat)
 
     # ── Email ─────────────────────────────────────────────────────────────
-    thunderbird       # full-featured email + calendar client
+    #thunderbird       # full-featured email + calendar client
 
     # ── Voice chat ────────────────────────────────────────────────────────
     teamspeak6-client # TeamSpeak 6 voice communication client
 
     # ── Video conferencing ─────────────────────────────────────────────────
-    zoom-us           # Zoom (unfree)
+    #zoom-us           # Zoom (unfree)
     # teams-for-linux # uncomment for Microsoft Teams (community wrapper)
   ];
 

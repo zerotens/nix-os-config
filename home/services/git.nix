@@ -10,8 +10,8 @@
 
     # ── Core settings ────────────────────────────────────────────────────
     settings = {
-      user.name            = "Your Name";        # ← change me
-      user.email           = "you@example.com";  # ← change me
+      user.name            = "Zero Tens";
+      user.email           = "12968743+zerotens@users.noreply.github.com";
 
       init.defaultBranch   = "main";
       pull.rebase          = false;
