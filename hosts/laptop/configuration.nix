@@ -13,7 +13,7 @@
   # Intel iGPU (VA-API for hardware video decode)
   hardware.opengl.extraPackages = with pkgs; [
     intel-media-driver   # iHD driver (Gen 8+)
-    vaapiVdpau
+    libva-vdpau-driver
     libvdpau-va-gl
   ];
 

@@ -34,7 +34,7 @@
   ];
 
   # Intel (integrated graphics — works out of the box, add VA-API packages)
-  # hardware.opengl.extraPackages = with pkgs; [ intel-media-driver vaapiVdpau ];
+  # hardware.opengl.extraPackages = with pkgs; [ intel-media-driver libva-vdpau-driver ];
 
   # ── Desktop-specific packages ──────────────────────────────────────────────
   environment.systemPackages = with pkgs; [
@@ -55,5 +55,5 @@
     rootless.enable   = true;
     rootless.setSocketVariable = true;
   };
-  users.users.nixuser.extraGroups = [ "docker" ];
+  users.users.zerotens.extraGroups = [ "docker" ];
 }
