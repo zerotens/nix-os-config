@@ -37,11 +37,11 @@
   services.logind = {
     lidSwitch              = "suspend";
     lidSwitchExternalPower = "lock";
-    extraConfig = ''
-      HandlePowerKey=hibernate
-      IdleAction=suspend
-      IdleActionSec=10min
-    '';
+    settings.Login = {
+      HandlePowerKey  = "hibernate";
+      IdleAction      = "suspend";
+      IdleActionSec   = "10min";
+    };
   };
 
   # ── Laptop-specific packages ───────────────────────────────────────────────
