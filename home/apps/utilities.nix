@@ -9,7 +9,7 @@
     # ── File management ───────────────────────────────────────────────────
     # nautilus is the GNOME default; install extras for power use
     nautilus-open-any-terminal   # right-click "Open in Terminal"
-    gnome-sushi                  # spacebar quick-look in Nautilus
+    gnome.sushi                  # spacebar quick-look in Nautilus
     file-roller                  # GNOME archive manager (zip/tar/7z GUI)
 
     # ── System monitoring ─────────────────────────────────────────────────
