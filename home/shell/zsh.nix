@@ -10,10 +10,12 @@
     autosuggestion.enable     = true;
     syntaxHighlighting.enable = true;
     enableCompletion          = true;
-    historySize               = 10000;
-    history.save              = 50000;
-    history.ignoreDups        = true;
-    history.share             = true;
+    history = {
+      size       = 10000;
+      save       = 50000;
+      ignoreDups = true;
+      share      = true;
+    };
 
     initExtra = ''
       # ── zoxide smart cd ─────────────────────────────────────────────────
