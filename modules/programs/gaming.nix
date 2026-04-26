@@ -56,10 +56,6 @@
     };
   };
 
-  # ── MangoHUD ───────────────────────────────────────────────────────────────
-  # In-game overlay showing FPS, frametime, temps, etc.
-  programs.mangohud.enable = true;
-
   # ── Proton / Wine dependencies ─────────────────────────────────────────────
   # 32-bit userland is required for most Windows games via Proton.
   hardware.opengl = {
@@ -72,6 +68,9 @@
     lutris          # multi-platform game manager (GOG, Epic, etc.)
     heroic          # Epic / GOG / Amazon launcher built on Electron + Wayland
     bottles         # Wine environment manager
+
+    # In-game overlay (FPS, frametime, temps)
+    mangohud
 
     # Utilities
     winetricks
