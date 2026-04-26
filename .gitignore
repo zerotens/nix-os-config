@@ -1,0 +1,25 @@
+# NixOS config .gitignore
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Nix build results symlink (created by `nix build`)
+result
+result-*
+
+# Direnv
+.direnv/
+.envrc
+
+# Editor artefacts
+.vscode/
+*.swp
+*~
+
+# macOS
+.DS_Store
+
+# Secrets — NEVER commit private keys, passwords, or age/gpg-encrypted files
+# unless you know what you're doing (agenix / sops-nix pattern).
+secrets/
+*.age
+*.pem
+*.key
