@@ -30,7 +30,8 @@
     ./shell/starship.nix
     ./shell/tools.nix
 
-    # XDG user directories
+    # Niri compositor config and XDG user directories
+    ./desktop/niri.nix
     ./desktop/xdg.nix
 
     # User-level background services
