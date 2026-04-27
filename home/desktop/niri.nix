@@ -1,21 +1,8 @@
-{ pkgs, inputs, ... }:
-{
-  # ...
+# home/desktop/niri.nix
+# ─────────────────────────────────────────────────────────────────────────────
+# Niri compositor user configuration.
+# Noctalia-shell manages the niri config (spawn-at-startup etc.) via its own
+# Home Manager module — no manual config.kdl needed here.
+{ ... }:
 
-  home-manager.users.zerotens = {
-    # ...
-    programs.niri = {
-      package = niri;
-      settings = {
-        # ...
-        spawn-at-startup = [
-          {
-            command = [
-              "noctalia-shell"
-            ];
-          }
-        ];
-      };
-    };
-  };
-}
+{ }
