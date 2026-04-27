@@ -14,6 +14,12 @@
   # Must match system.stateVersion in common.nix — do NOT bump after install.
   home.stateVersion  = "25.11";
 
+  # ── Noctalia shell ────────────────────────────────────────────────────────
+  programs.noctalia-shell = {
+    enable  = true;
+    package = inputs.noctalia.packages.${pkgs.system}.default;
+  };
+
   # ── Sub-module imports ─────────────────────────────────────────────────────
 
   imports = [
