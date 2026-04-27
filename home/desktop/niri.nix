@@ -1,10 +1,21 @@
-# home/desktop/niri.nix
-# ─────────────────────────────────────────────────────────────────────────────
-# Niri compositor user configuration (~/.config/niri/config.kdl).
-{ ... }:
-
+{ pkgs, inputs, ... }:
 {
-  xdg.configFile."niri/config.kdl".text = ''
-    spawn-at-startup "noctalia-shell"
-  '';
+  # ...
+
+  home-manager.users.zerotens = {
+    # ...
+    programs.niri = {
+      package = niri;
+      settings = {
+        # ...
+        spawn-at-startup = [
+          {
+            command = [
+              "noctalia-shell"
+            ];
+          }
+        ];
+      };
+    };
+  };
 }
