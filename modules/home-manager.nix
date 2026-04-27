@@ -30,7 +30,10 @@
 { inputs, ... }:
 
 {
-  imports = [ inputs.home-manager.nixosModules.home-manager ];
+  imports = [
+    inputs.home-manager.nixosModules.home-manager
+    inputs.noctalia.nixosModules.default
+  ];
 
   home-manager = {
     # Re-use the system nixpkgs rather than a separate HM-managed instance.

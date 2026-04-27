@@ -15,6 +15,8 @@
   home.stateVersion  = "25.11";
 
   # ── Sub-module imports ─────────────────────────────────────────────────────
+  programs.noctalia-shell.enable = true;
+
   imports = [
     # User-installed applications (the main focus of this file)
     ./apps/communication.nix
