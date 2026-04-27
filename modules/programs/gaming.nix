@@ -78,6 +78,9 @@
     antimicrox       # map gamepad buttons to keyboard/mouse
   ];
 
+  # ── Xbox One wireless dongle driver ──────────────────────────────────────
+  hardware.xone.enable = true;
+
   # ── udev rules for controllers ────────────────────────────────────────────
   # PlayStation, Xbox, and generic gamepad support without needing root.
   services.udev.packages = [

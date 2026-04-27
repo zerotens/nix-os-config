@@ -15,6 +15,9 @@
 
   services.desktopManager.gnome.enable = true;
 
+  # ── Niri (scrollable-tiling Wayland compositor) ────────────────────────────
+  programs.niri.enable = true;
+
   # XWayland — runs X11 apps inside the Wayland compositor
   # Set to false only if you never need legacy X11 apps.
   programs.xwayland.enable = true;

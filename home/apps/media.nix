@@ -9,6 +9,7 @@
     # ── Video ─────────────────────────────────────────────────────────────
     celluloid         # GTK front-end for mpv — GNOME-native look
     vlc               # universal video/audio player
+    makemkv           # Blu-ray / DVD ripping and MKV conversion (unfree)
 
     # ── Music / audio ─────────────────────────────────────────────────────
     spotify           # streaming (unfree; uses Electron + Wayland via OZONE_WL)

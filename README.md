@@ -26,7 +26,7 @@ nixos-config/
 │   │   └── hardware-configuration.nix   # !! Generate on real hardware !!
 │   └── laptop/
 │       ├── configuration.nix   # Optimus PRIME, Bluetooth, wireless
-│       └── hardware-configuration.nix   # !! Generate on real hardware !!
+│       └── hardware-configuration.nix
 └── home/
     └── default.nix             # Home Manager — dotfiles, user packages
 ```
