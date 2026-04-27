@@ -15,10 +15,6 @@
   home.stateVersion  = "25.11";
 
   # ── Sub-module imports ─────────────────────────────────────────────────────
-  programs.noctalia-shell = {
-    enable  = true;
-    package = pkgs.unstable.noctalia-shell;
-  };
 
   imports = [
     # User-installed applications (the main focus of this file)
