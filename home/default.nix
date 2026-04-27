@@ -30,8 +30,7 @@
     ./shell/starship.nix
     ./shell/tools.nix
 
-    # GNOME desktop tweaks and XDG directories
-    ./desktop/gnome-settings.nix
+    # XDG user directories
     ./desktop/xdg.nix
 
     # User-level background services
