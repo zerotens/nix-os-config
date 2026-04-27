@@ -6,16 +6,6 @@
 {
   # ── Niri compositor ────────────────────────────────────────────────────────
   programs.niri.enable    = true;
-  programs.niri.settings = {
-        # ...
-        spawn-at-startup = [
-          {
-            command = [
-              "noctalia-shell"
-            ];
-          }
-        ];
-  };
   programs.xwayland.enable = true;
 
   # ── Display manager (greetd + tuigreet) ───────────────────────────────────

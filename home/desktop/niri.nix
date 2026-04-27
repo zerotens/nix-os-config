@@ -1,8 +1,21 @@
 # home/desktop/niri.nix
 # ─────────────────────────────────────────────────────────────────────────────
-# Niri compositor user configuration.
-# Noctalia-shell manages the niri config (spawn-at-startup etc.) via its own
-# Home Manager module — no manual config.kdl needed here.
+# Niri session services.
 { ... }:
 
-{ }
+{
+  systemd.user.services.noctalia-shell = {
+    Unit = {
+      Description = "Noctalia Shell";
+      After       = [ "graphical-session.target" ];
+      PartOf      = [ "graphical-session.target" ];
+    };
+    Service = {
+      ExecStart = "noctalia-shell";
+      Restart   = "on-failure";
+    };
+    Install = {
+      WantedBy = [ "graphical-session.target" ];
+    };
+  };
+}
