@@ -1,7 +1,7 @@
 # modules/desktop/niri.nix
 # ─────────────────────────────────────────────────────────────────────────────
 # Niri scrollable-tiling Wayland compositor with greetd display manager.
-{ config, pkgs, lib, ... }:
+{ unstable-pkgs, config, pkgs, lib, ... }:
 
 {
   # ── Niri compositor ────────────────────────────────────────────────────────
@@ -34,6 +34,8 @@
     pkgs.nerd-fonts.fira-code
     unstable-pkgs.noctalia-shell
   ];
+
+  _module.args.unstable-pkgs = import <nixos-unstable> {};
 
   # ── Flatpak ────────────────────────────────────────────────────────────────
   services.flatpak.enable = true;
