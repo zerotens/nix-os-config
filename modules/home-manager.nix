@@ -48,7 +48,6 @@
 
     # Load additional Home Manager modules for all users.
     sharedModules = [
-      inputs.niri-flake.homeModules.niri
     ];
 
     # ── User bindings ──────────────────────────────────────────────────────
