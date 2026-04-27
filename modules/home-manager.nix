@@ -30,10 +30,7 @@
 { inputs, ... }:
 
 {
-  imports = [
-    inputs.home-manager.nixosModules.home-manager
-    inputs.noctalia.nixosModules.default
-  ];
+  imports = [ inputs.home-manager.nixosModules.home-manager ];
 
   home-manager = {
     # Re-use the system nixpkgs rather than a separate HM-managed instance.
@@ -48,6 +45,9 @@
     # Pass flake inputs into every HM module so modules can reach
     # pkgs.unstable (via the overlay) or other flake outputs.
     extraSpecialArgs = { inherit inputs; };
+
+    # Load the noctalia-shell Home Manager module for all users.
+    sharedModules = [ inputs.noctalia.homeModules.default ];
 
     # ── User bindings ──────────────────────────────────────────────────────
     # Each entry maps a NixOS username → a Home Manager configuration file.
