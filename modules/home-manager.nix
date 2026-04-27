@@ -46,8 +46,11 @@
     # pkgs.unstable (via the overlay) or other flake outputs.
     extraSpecialArgs = { inherit inputs; };
 
-    # Load the noctalia-shell Home Manager module for all users.
-    sharedModules = [ inputs.noctalia.homeModules.default ];
+    # Load additional Home Manager modules for all users.
+    sharedModules = [
+      inputs.noctalia.homeModules.default
+      inputs.niri-flake.homeModules.niri
+    ];
 
     # ── User bindings ──────────────────────────────────────────────────────
     # Each entry maps a NixOS username → a Home Manager configuration file.

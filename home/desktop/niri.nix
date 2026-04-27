@@ -1,21 +1,12 @@
 # home/desktop/niri.nix
 # ─────────────────────────────────────────────────────────────────────────────
-# Niri session services.
+# Niri compositor user configuration via sodiboo/niri-flake Home Manager module.
 { ... }:
 
 {
-  systemd.user.services.noctalia-shell = {
-    Unit = {
-      Description = "Noctalia Shell";
-      After       = [ "graphical-session.target" ];
-      PartOf      = [ "graphical-session.target" ];
-    };
-    Service = {
-      ExecStart = "noctalia-shell";
-      Restart   = "on-failure";
-    };
-    Install = {
-      WantedBy = [ "graphical-session.target" ];
-    };
+  programs.niri.settings = {
+    spawn-at-startup = [
+      { command = [ "noctalia-shell" ]; }
+    ];
   };
 }
