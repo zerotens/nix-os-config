@@ -15,6 +15,7 @@
             ];
           }
         ];
+  };
   programs.xwayland.enable = true;
 
   # ── Display manager (greetd + tuigreet) ───────────────────────────────────
