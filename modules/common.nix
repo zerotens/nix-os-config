@@ -12,9 +12,6 @@
       auto-optimise-store    = true;
       # Trusted users can modify nix.conf on the fly (useful during development)
       trusted-users          = [ "root" "@wheel" ];
-      # Noctalia binary cache (avoids compiling Quickshell from source)
-      substituters           = [ "https://noctalia.cachix.org" ];
-      trusted-public-keys    = [ "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4=" ];
     };
 
     # Automatic garbage collection: keep last 14 days, run weekly

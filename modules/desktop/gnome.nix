@@ -8,6 +8,11 @@
   programs.niri.enable    = true;
   programs.xwayland.enable = true;
 
+  programs.noctalia-shell = {
+    enable  = true;
+    package = pkgs.unstable.noctalia-shell;
+  };
+
   # ── Display manager (greetd + tuigreet) ───────────────────────────────────
   services.greetd = {
     enable = true;
