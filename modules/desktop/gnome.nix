@@ -1,11 +1,11 @@
 # modules/desktop/niri.nix
 # ─────────────────────────────────────────────────────────────────────────────
 # Niri scrollable-tiling Wayland compositor with greetd display manager.
-{ unstable-pkgs, config, pkgs, lib, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   # ── Niri compositor ────────────────────────────────────────────────────────
-  programs.niri.enable    = true;
+  programs.niri.enable     = true;
   programs.xwayland.enable = true;
 
   # ── Display manager (greetd + tuigreet) ───────────────────────────────────
@@ -25,17 +25,14 @@
     EGL_PLATFORM    = "wayland";
   };
 
-  environment.systemPackages = [
+  environment.systemPackages = with pkgs; [
     # Fonts
-    pkgs.noto-fonts
-    pkgs.noto-fonts-cjk-sans
-    pkgs.noto-fonts-color-emoji
-    pkgs.nerd-fonts.jetbrains-mono
-    pkgs.nerd-fonts.fira-code
-    unstable-pkgs.noctalia-shell
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-color-emoji
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.fira-code
   ];
-
-  _module.args.unstable-pkgs = import <nixos-unstable> {};
 
   # ── Flatpak ────────────────────────────────────────────────────────────────
   services.flatpak.enable = true;
