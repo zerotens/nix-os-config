@@ -25,14 +25,14 @@
     EGL_PLATFORM    = "wayland";
   };
 
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = [
     # Fonts
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-color-emoji
-    nerd-fonts.jetbrains-mono
-    nerd-fonts.fira-code
-    noctalia-shell
+    pkgs.noto-fonts
+    pkgs.noto-fonts-cjk-sans
+    pkgs.noto-fonts-color-emoji
+    pkgs.nerd-fonts.jetbrains-mono
+    pkgs.nerd-fonts.fira-code
+    unstable-pkgs.noctalia-shell
   ];
 
   # ── Flatpak ────────────────────────────────────────────────────────────────
